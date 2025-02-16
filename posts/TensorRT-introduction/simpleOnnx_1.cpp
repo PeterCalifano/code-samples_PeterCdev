@@ -65,8 +65,8 @@ nvinfer1::ICudaEngine* createCudaEngine(string const& onnxModelPath, int batchSi
         return nullptr;
     }
 
-    builder->setMaxBatchSize(batchSize);
-    config->setMaxWorkspaceSize((1 << 30));
+    //builder->setMaxBatchSize(batchSize);
+    //config->setMaxWorkspaceSize((1 << 30));
     
     auto profile = builder->createOptimizationProfile();
     profile->setDimensions(network->getInput(0)->getName(), OptProfileSelector::kMIN, Dims4{1, 3, 256 , 256});

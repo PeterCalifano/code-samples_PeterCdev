@@ -38,6 +38,8 @@
 #include <math.h>
 #include <cmath>
 
+// FIXME: this code is not compatible with latest version TensorRT  
+
 using namespace nvinfer1;
 using namespace std;
 using namespace cudawrapper;
